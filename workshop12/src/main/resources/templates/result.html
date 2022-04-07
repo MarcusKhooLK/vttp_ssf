@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Your list of <span th:text="${numbersToGenerate}"></span> random numbers</h1>
+    <ul th:each="numVal : ${uniqueGeneratedNumbers}">
+        <li th:text="${numVal}"></li>
+        <img th:src="@{${'/images/' + numVal + '.png'}}" width=200 height=200 />
+        <!-- @ means http://localhost:8080 -->
+    </ul>
+</body>
+</html>

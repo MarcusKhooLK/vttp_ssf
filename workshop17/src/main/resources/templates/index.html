@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <h1>Currency Exchange</h1>
+    <form action="/convert" method="get">
+        <table>
+            <tr>
+                <td>From: </td>
+                <td>
+                    <select name="fromCurrencyID">
+                        <option data-th-each="currency: ${allCurrencies}" data-th-text="${currency.countryName} + ' ' + ${currency.currencyName} + ' ' + ${currency.currencySymbol}" data-th-value="${currency.id}"></option>-->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>To: </td>
+                <td>
+                    <select name="toCurrencyID">
+                        <option data-th-each="currency: ${allCurrencies}" data-th-text="${currency.countryName} + ' ' + ${currency.currencyName} + ' ' + ${currency.currencySymbol}" data-th-value="${currency.id}"></option>-->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Amount: </td>
+                <td><input type="text" name="amount" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Convert"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

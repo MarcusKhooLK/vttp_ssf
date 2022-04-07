@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Page</title>
+</head>
+<body>
+    <h1>How many numbers do you want to generate?</h1>
+    <!-- th:action points to http://localhost:8080/generate -->
+    <!-- th:object is the object to which the submitted data is binded -->
+    <form action="#" th:action="@{/generate}" th:object="${generateObj}" method="post">
+        <p>
+            <input type ="text" th:field="*{numberVal}" />
+            <input type ="submit" value="Generate" />
+        </p>
+    </form>
+</body>
+</html>

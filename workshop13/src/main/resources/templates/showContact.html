@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xlmns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Contact</title>
+</head>
+
+<body th:object="${contact}">
+    <h1>Your contact information</h1>
+    <p>Name: </p>
+    <p th:text="*{name}"></p>
+    <p>Email:</p>
+    <p th:text="*{email}"></p>
+    <p>Phone:</p>
+    <p th:text="*{phone}"></p>
+    <p>Id:</p>
+    <p th:text="*{id}"></p>
+    <br/>
+    <p th:text="${httpResponse}"></p>
+</body>
+
+</html>
